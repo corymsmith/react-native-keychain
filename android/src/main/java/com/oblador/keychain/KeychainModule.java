@@ -51,7 +51,7 @@ public class KeychainModule extends ReactContextBaseJavaModule {
 
         try {
             String encryptedUsername = encryptWithEntity(username, entity);
-            String encryptedPassword = encryptWithEntity(username, entity);
+            String encryptedPassword = encryptWithEntity(password, entity);
 
             SharedPreferences.Editor prefsEditor = prefs.edit();
             prefsEditor.putString(service + ":u", encryptedUsername);
